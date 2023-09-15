@@ -14,7 +14,7 @@ jobs:
             echo $version
             docker build -t elastic2ls/gitops-tutorial:$version .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker push elastic2ls/gitops-tutoria:$version
+            docker push elastic2ls/gitops-tutorial:$version
 
   Update_manifest:
     docker:
@@ -31,7 +31,7 @@ jobs:
             git config --global user.email "gitops-tutorial@elastic2ls.com"
             git config --global user.name "AlexanderWiechert"
             pwd
-            cd kube_manifest
+            cd manifest
             pwd
             echo $TAG
             sed -i "s/build-.*/build-$TAG/g" manifest/deployment.yaml
