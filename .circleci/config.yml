@@ -30,7 +30,7 @@ jobs:
             git clone https://github.com/AlexanderWiechert/gitops-tutorial-kubernetes.git
             git config --global user.email "gitops-tutorial@elastic2ls.com"
             git config --global user.name "AlexanderWiechert"
-            pwd
+            pwd && ls -la
             cd manifest
             pwd
             echo $TAG
