@@ -30,7 +30,7 @@ jobs:
             git clone https://github.com/AlexanderWiechert/gitops-tutorial-kubernetes.git
             git config --global user.email "gitops-tutorial@elastic2ls.com"
             git config --global user.name "AlexanderWiechert"
-            cd gitops-tutorial-kubernetes/manifest
+            cd gitops-tutorial-kubernetes
             pwd && ls -la
             echo $TAG
             sed -i "s/build-.*/build-$TAG/g" manifest/deployment.yaml
